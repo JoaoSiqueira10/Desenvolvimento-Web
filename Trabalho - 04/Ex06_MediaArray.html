@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Média Array</title>
+  </head>
+  <body>
+    <div style="text-align:left">
+      <script type="text/javascript">
+        var num;
+        var soma = 0;
+        var media;
+        var string;
+
+        numeros = new Array();
+        
+        do {
+            
+            string = prompt("Digite o numero (digite 0 para sair)", "");
+            num = parseFloat(string);
+            if(num != 0){
+            numeros.push(num);
+            }
+        } while (num != 0);
+
+        numeros.forEach(n => {soma = soma + n;});
+        media = soma/numeros.length;
+        
+        document.write("Numeros no Array: " + numeros + ". Soma: " + soma + ". Media: " + media);
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<!–- js12.html -->
+
+    <head>
+        <title>Mais Alto</title>
+    </head>
+
+    <body>
+        <p>
+            <script type="text/javascript">
+
+                var string;
+                var maior;
+                var nome;
+                pessoas = new Array();
+                alturas = new Array();
+
+                string = prompt("Digite o nome das 5 pessoas separados por vírgulas", "Ana,Maria,Pedro,Jorge,Carlos");
+                pessoas = string.split(",");
+
+                string = prompt("Digite a altura das 5 pessoas em centímeros, separadas por vírgulas", "160,165,180,185,195");
+                alturas = string.split(",");
+
+                maior = 0;
+                alturas.forEach(altura => {
+                    if (altura > maior) {
+                        maior = altura;
+                    }
+                });
+                nome = pessoas[alturas.indexOf(maior)];
+
+                document.write("A pessoa mais alta eh: " + nome + " com altura de " + maior + " cm.");
+            </script>
+        </p>
+    </body>
+
+</html>

@@ -1,0 +1,40 @@
+<html>
+<!–- js09.html -->
+
+    <head>
+        <title>Tabajara</title>
+    </head>
+
+    <body>
+        <p>
+            <script type="text/javascript">
+             var text = prompt("Digite o Salario", "");
+             var newsal;
+             var porc;
+                if(text <= 280){
+                    newsal = text * (1 + 0.2);
+                    porc = text * 0.2;
+                    document.write("Salario antigo: R$ " + text + ". Aumento em 20%: R$ " + porc + ". Novo salario: R$ " + newsal);
+
+                }else if(text > 280 && text <= 720){
+                    newsal = text * (1 + 0.15);
+                    porc = text * 0.15;
+                    document.write("Salario antigo: R$ " + text + ". Aumento em 20%: R$ " + porc + ". Novo salario: R$ " + newsal);
+
+                }else if(text > 720 && text <= 1500){
+                    newsal = text * (1 + 0.1);
+                    porc = text * 0.1;
+                    document.write("Salario antigo: R$ " + text + ". Aumento em 20%: R$ " + porc + ". Novo salario: R$ " + newsal);
+
+                }else{
+                    newsal = text * (1 + 0.05);
+                    porc = text * 0.05;
+                    document.write("Salario antigo: R$ " + text + ". Aumento em 20%: R$ " + porc + ". Novo salario: R$ " + newsal);
+                }
+
+
+            </script>
+        </p>
+    </body>
+
+</html>

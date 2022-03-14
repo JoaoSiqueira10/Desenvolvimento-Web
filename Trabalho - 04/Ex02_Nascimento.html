@@ -1,0 +1,36 @@
+<html>
+<!–- js12.html -->
+
+    <head>
+        <title>Idade Exata</title>
+    </head>
+
+    <body>
+        <p>Tempo decorrido este ano:
+            <script type="text/javascript">
+                string = prompt("Digite sua data de nascimento (separada por tracos): ", "15-05-1995");
+                nasci = string.split("-");
+
+                string = prompt("Digite a hora do nascimento(separada por :): ", "7:12");
+                hora = string.split(":");
+
+                now = new Date();
+                nasc = new Date(nasci[2], nasci[1] - 1, nasci[0], hora[0], hora[1], 0, 0);
+                seg = Math.round((now - nasc) / 1000);
+
+                ano = Math.floor(seg / 31536000);
+                seg -= ano * 31536000;
+                mes = Math.floor(seg / 2592000);
+                seg -= mes * 2592000;
+                dia = Math.floor(seg / 86400);
+                seg -= dia * 86400;
+                hora = Math.floor(seg / 3600);
+                seg -= hora * 3600;
+                min = Math.floor(seg / 60);
+                seg -= min * 60;
+                document.write(ano + " anos, " + mes + " meses, " + dia + " dias, " + hora + " horas, " + min + " minutos e " + seg + " segundos.");
+            </script>
+        </p>
+    </body>
+
+</html>

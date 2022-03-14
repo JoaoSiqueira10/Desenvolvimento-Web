@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Tabela de Contas</title>
+  <style type="text/css">
+    th {
+      text-align: center;
+      padding: 10;
+      background-color: #2b3f9b;
+      color: rgb(16, 224, 51);
+    }
+  </style>
+
+<style type="text/css">
+    td {
+      text-align: center;
+      padding: 10;
+      background-color: #8c8d57;
+      color: rgb(29, 11, 11);
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    num = prompt("Digite dois numeros separados por virgula", "4,3");
+    num = num.split(",");
+    
+    x = parseFloat(num[0]);
+    y = parseFloat(num[1]);
+    
+    soma = x + y;
+    mult = x * y;
+    div = x / y;
+    sobra = x % y;
+
+    document.write("<table>");
+    
+    document.write("<tr> <th>Operaçao</th> <th>Resultado</th> </tr>");
+    document.write("<tr> <td>" + x + " + " + y + " </td>  <td>" + soma + "</td> </tr>");
+    document.write("<tr> <td>" + x + " * " + y + " </td>  <td>" + mult + "</td> </tr>");
+    document.write("<tr> <td>" + x + " / " + y + " </td>  <td>" + div + "</td> </tr>");
+    document.write("<tr> <td>" + x + " % " + y + " </td>  <td>" + sobra + "</td> </tr>");
+
+    document.write("</table>");
+
+  </script>
+</body>
+</html>

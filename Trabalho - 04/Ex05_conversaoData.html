@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Conversor de Data</title>
+</head>
+
+<body>
+    <div style="text-align:left">
+        <script type="text/javascript">
+            string = prompt("Digite uma data(separada por tracos): ", "15-05-1995");
+            data = string.split("-");
+
+            agora = new Date();
+            dataLong = new Date(data[2], data[1]-1, data[0]);
+            document.write("Data: " + dataLong);
+        </script>
+    </div>
+</body>
+
+</html>

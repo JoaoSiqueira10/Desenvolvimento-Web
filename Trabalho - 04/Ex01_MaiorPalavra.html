@@ -1,0 +1,51 @@
+<html>
+<!–- js09.html -->
+
+    <head>
+        <title>Maior Palavra</title>
+        </script>
+    </head>
+
+    <body>
+        <p>
+            <script type="text/javascript">
+
+                var text = prompt("Digite uma frase", "essa frase eh gigante ou nao eh");
+                var espaco = [' '];
+                var medini = 0;
+                var medfin = 0;
+                var tfinal;
+                var tinicial = 0;
+                var tamanho;
+                var entrou = 0;
+                var ma = 0;
+
+                for (var i = 0; i < text.length; i++) {
+
+                    if (espaco.indexOf(text[i]) != -1) {
+
+                        tinicial = tfinal + 1;
+                        
+                    } else {
+
+                        tfinal = i;
+                        tamanho = tfinal - tinicial;
+
+                        if (tamanho > ma) {
+
+                            ma = tamanho;
+                            medini = tinicial;
+                            medfin = tfinal;
+
+                        }
+                    }
+                }
+                PalavraMaior = text.substring(medini, medfin + 1);
+
+                document.writeln("A maior palavra eh: " + PalavraMaior);
+
+            </script>
+        </p>
+    </body>
+
+</html>
